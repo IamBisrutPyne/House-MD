@@ -1,0 +1,727 @@
+        /* ---------------------------------------------
+       Theme, variables and basic reset
+       ---------------------------------------------*/
+        :root {
+            --bg: #0f1724;
+            --card: rgba(255, 255, 255, 0.04);
+            --muted: rgba(255, 255, 255, 0.65);
+            --accent: #e04f5f;
+            /* blood-ish */
+            --accent-2: #2bd4c6;
+            /* teal for diagnostics */
+            --glass: rgba(255, 255, 255, 0.06);
+            --glass-strong: rgba(255, 255, 255, 0.1);
+            --max-width: 1100px;
+            --radius: 14px;
+            --shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html,
+        body {
+            height: 100%
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+            background: radial-gradient(1200px 600px at 10% 10%, rgba(224, 79, 95, 0.06), transparent),
+                linear-gradient(180deg, #07101a 0%, var(--bg) 60%);
+            color: #e6edf3;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            line-height: 1.45;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(95%, var(--max-width));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo .mark {
+            width: 56px;
+            height: 56px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--accent), #ff7a8a);
+            display: grid;
+            place-items: center;
+            font-weight: 900;
+            font-family: 'Playfair Display';
+            font-size: 20px;
+            box-shadow: var(--shadow);
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            align-items: center
+        }
+
+        nav a {
+            color: var(--muted);
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        /* Hero */
+        .hero {
+            background-image: url('background.jpeg');
+            background-size: cover;
+            /* Scales image to cover container */
+            background-position: center;
+            /* Centers the image */
+            background-repeat: no-repeat;
+            /* No tiling */
+
+            width: 100%;
+            /* Prevent horizontal overflow */
+            height: 100vh;
+            /* Full viewport height */
+
+            display: grid;
+            grid-template-columns: 1fr 420px;
+            gap: 28px;
+            align-items: center;
+
+            border-radius: 20px;
+            /* Rounded corners */
+            overflow: hidden;
+            /* Ensures background respects border-radius */
+            box-sizing: border-box;
+            /* Prevents extra width from padding/border */
+            margin: 0;
+            /* Remove default margin */
+        }
+
+        .hero-card {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.02));
+            border-radius: var(--radius);
+            padding: 28px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(6px);
+        }
+
+        h1 {
+            font-family: 'Playfair Display';
+            font-size: 42px;
+            margin: 0 0 6px 0;
+            letter-spacing: -0.5px
+        }
+
+        .subtitle {
+            color: var(--muted);
+            margin-bottom: 18px
+        }
+
+        /* ECG line / animated waveform */
+        .ecg-wrap {
+            position: relative;
+            padding: 18px 0;
+        }
+
+        .ecg {
+            width: 100%;
+            height: 78px;
+            border-radius: 8px;
+            display: block;
+            overflow: hidden;
+            position: relative;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+
+            /* 1. ECG Mesh Grid Background */
+            background-color: #111;
+            /* Dark background color */
+            background-image:
+                /* Vertical lines (gray) */
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                /* Horizontal lines (gray) */
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+
+            /* 2. Grid Spacing: 15px boxes */
+            background-size: 15px 15px;
+        }
+
+        .ecg svg {
+            /* KEY FOR RESPONSIVENESS: */
+            /* Ensure the SVG itself fills its container */
+            width: 100%;
+            height: 100%;
+            display: block;
+
+            /* Ensure the waveform color remains visible */
+            z-index: 2;
+            position: relative;
+        }
+
+        /* Optional: Subtle glow effect behind the ECG line */
+        .ecg svg path {
+            filter: drop-shadow(0 0 3px var(--accent-2));
+        }
+
+
+        /* small stat blocks */
+        .stats {
+            display: flex;
+            gap: 10px;
+            margin-top: 14px
+        }
+
+        .stat {
+            background: var(--glass);
+            padding: 10px 12px;
+            border-radius: 10px;
+            text-align: center;
+            flex: 1
+        }
+
+        .stat .n {
+            font-weight: 800;
+            font-size: 18px
+        }
+
+        .stat .l {
+            font-size: 12px;
+            color: var(--muted)
+        }
+
+        /* Characters grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px
+        }
+
+        .card {
+            background: var(--card);
+            padding-bottom: 16px;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.03)
+        }
+
+        .meta {
+            padding-top: 12px
+        }
+
+        .meta h3 {
+            margin: 0;
+            font-size: 18px;
+            align-items: center;
+        }
+
+        .meta p {
+            margin: 6px 0 0 0;
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        /* modal */
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(3, 6, 10, 0.6);
+            display: none;
+            place-items: center;
+            padding: 20px
+        }
+
+        .modal.open {
+            display: grid
+        }
+
+        .modal .panel {
+            width: min(820px, 95%);
+            background: linear-gradient(180deg, #07131a, #0e1b25);
+            padding: 22px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.04)
+        }
+
+        .close {
+            position: absolute;
+            right: 14px;
+            top: 10px;
+            background: none;
+            border: 0;
+            color: var(--muted);
+            font-weight: 800
+        }
+
+        /* Episodes / search */
+        .searchbar {
+            display: flex;
+            gap: 10px
+        }
+
+        .searchbar input {
+            flex: 1;
+            padding: 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            background: transparent;
+            color: inherit
+        }
+
+        .episodes {
+            margin-top: 18px;
+            display: grid;
+            gap: 10px
+        }
+
+        .episode {
+            padding: 12px;
+            border-radius: 8px;
+            background: var(--glass);
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .episode small {
+            color: var(--muted)
+        }
+
+        /* mini interactive diagnostic */
+        .diagnostic {
+            margin-top: 18px;
+            padding: 16px;
+            border-radius: 12px;
+            background: linear-gradient(90deg, rgba(43, 212, 198, 0.04), rgba(224, 79, 95, 0.02));
+            border: 1px solid rgba(255, 255, 255, 0.03)
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 14px;
+            border-radius: 10px;
+            background: linear-gradient(90deg, var(--accent), #ff8a93);
+            color: #fff;
+            font-weight: 800;
+            text-decoration: none;
+            border: 0;
+            cursor: pointer
+        }
+
+        footer {
+            padding: 28px 0 80px 0;
+            color: var(--muted)
+        }
+
+        /* responsiveness */
+        @media (max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 32px
+            }
+        }
+
+        /* small animation touches */
+        .float {
+            animation: float 4s ease-in-out infinite
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0)
+            }
+
+            50% {
+                transform: translateY(-6px)
+            }
+
+            100% {
+                transform: translateY(0)
+            }
+        }
+
+        /* subtle pulse for accent */
+        .ping {
+            position: relative
+        }
+
+        .ping::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            box-shadow: 0 0 0 0 rgba(224, 79, 95, 0.25);
+            animation: ping 2.2s infinite
+        }
+
+        @keyframes ping {
+            0% {
+                box-shadow: 0 0 0 0 rgba(224, 79, 95, 0.12)
+            }
+
+            70% {
+                box-shadow: 0 0 0 14px rgba(224, 79, 95, 0)
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(224, 79, 95, 0)
+            }
+        }
+
+        /* accessibility focus */
+        :focus {
+            outline: 3px solid rgba(43, 212, 198, 0.12);
+            outline-offset: 2px
+        }
+
+        .character-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center !important;
+            /* Centers image + text horizontally */
+            justify-content: center;
+            text-align: center;
+            /* Centers text under the image */
+            /* background: rgba(255, 255, 255, 0.05);  Subtle translucent background */
+            backdrop-filter: blur(8px);
+            /* Soft glass effect */
+            border-radius: 20px;
+            padding-top: 16px;
+            padding-right: 0;
+            /* padding-left: 16px; */
+
+            /* padding-left: 20px; */
+            /* padding-right: 20px; */
+            width: auto;
+            /* Consistent card size */
+            /* margin: 20px; */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25); */
+        }
+
+        /* Hover lift for a premium look */
+        .character-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 30px rgba(0, 174, 255, 0.3);
+        }
+
+        /* Character image (paste the earlier code here) */
+        .character-img {
+            width: 200px;
+            height: 260px;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+            margin-bottom: 15px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .character-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(255, 255, 255, 0.3),
+                0 0 20px rgba(0, 174, 255, 0.4);
+            border-color: rgba(0, 174, 255, 0.6);
+        }
+
+        /* Character name */
+        .character-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        /* Muted text under the name (e.g. role or actor) */
+        .character-role {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.65);
+            font-style: italic;
+            text-align: center;
+
+        }
+
+        .diagnostic-game {
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #0a0a0a, #1a1a1a);
+            color: #fff;
+            text-align: center;
+        }
+
+        .diagnostic-game h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
+        }
+
+        #game-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 10px 25px rgba(0, 174, 255, 0.3);
+        }
+
+        .patient-info h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+            color: #00aeff;
+        }
+
+        .patient-info p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .patient-info ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 15px;
+        }
+
+        .options-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .option-btn {
+            background: rgba(0, 174, 255, 0.2);
+            border: 2px solid #00aeff;
+            color: #fff;
+            padding: 12px 18px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
+        }
+
+        .option-btn:hover {
+            transform: scale(1.05);
+            background: rgba(0, 174, 255, 0.35);
+            box-shadow: 0 6px 20px rgba(0, 174, 255, 0.4);
+        }
+
+        .feedback {
+            font-size: 1rem;
+            margin-bottom: 15px;
+            min-height: 24px;
+        }
+
+        .scoreboard {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .next-btn {
+            display: none;
+            padding: 12px 25px;
+            border-radius: 15px;
+            border: none;
+            background: #00aeff;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .next-btn:hover {
+            background: #008acc;
+        }
+
+        .ecg-container {
+            margin-top: 40px;
+            height: 50px;
+            overflow: hidden;
+        }
+
+        .ecg-line {
+            width: 200%;
+            height: 2px;
+            background: #00aeff;
+            animation: ecg 1s linear infinite;
+        }
+
+        @keyframes ecg {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            75% {
+                transform: translateX(-75%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        #ecgCanvas {
+            /* 1. Responsiveness */
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+
+            /* KEY: Force it to fill its container */
+            width: 100%;
+            /* The height will be controlled by its HTML attribute, but we can cap the max height if needed */
+            max-width: 600px;
+            /* Limits the max size on huge screens if needed */
+            height: 100px;
+            /* Fixed height for the canvas container */
+
+            /* 2. Mesh Grid Background (Same successful technique as before) */
+            background-color: #111;
+            background-image:
+                /* Vertical lines */
+                linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                /* Horizontal lines */
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+            background-size: 15px 15px;
+        }
+
+
+        /* --- New CSS for Hamburger Menu (Add this to your <style> block) --- */
+
+        .nav-toggle {
+            display: none;
+            /* Hidden by default on large screens */
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 20;
+            /* Ensure button is on top of other elements */
+        }
+
+        .nav-toggle .bar {
+            width: 100%;
+            height: 3px;
+            background: var(--color-off-white, #e6edf3);
+            border-radius: 1px;
+            transition: all 0.3s ease-in-out;
+            transform-origin: 1px;
+        }
+
+        /* ----------------------------------
+   Responsive Navigation Logic
+   ---------------------------------- */
+        @media (max-width: 768px) {
+
+            /* Show Hamburger button */
+            .nav-toggle {
+                display: flex;
+            }
+
+            /* Full navigation menu */
+            nav {
+                /* Start off-screen */
+                position: fixed;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 10;
+
+                /* Menu appearance */
+                width: min(70vw, 300px);
+                background: var(--bg, #0f1724);
+                padding-top: 80px;
+                flex-direction: column;
+                gap: 20px;
+                box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+
+                /* Transition for sliding effect */
+                transform: translateX(100%);
+                transition: transform 0.3s ease-out;
+            }
+
+            /* State when menu is open */
+            nav[data-visible="true"] {
+                transform: translateX(0);
+            }
+
+            /* Center links in mobile menu */
+            nav a {
+                padding: 10px 20px;
+                width: 100%;
+                text-align: center;
+            }
+
+            /* Hamburger animation (X icon) */
+            .nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+                transform: rotate(45deg);
+            }
+
+            .nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+                opacity: 0;
+                /* Middle bar disappears */
+            }
+
+            .nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+                transform: rotate(-45deg);
+            }
+        }
+
+        /* Ensure header space is respected */
+        @media (max-width: 768px) {
+            header {
+                position: sticky;
+                top: 0;
+                background: var(--bg);
+                z-index: 30;
+                /* Keep it on top of the menu */
+                border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            }
+        }
+
+
+        /* .avatar{
+      width:100%;height:140px;border-radius:10px;background:linear-gradient(180deg, rgba(0,0,0,0.2), rgba(0,0,0,0.3));display:grid;place-items:center;font-size:36px;font-weight:900;font-family:'Playfair Display';
+    } */
