@@ -5,7 +5,7 @@
 
 A fan-made landing page for House MD with a fun & interactive diagnostic challenge!
 
-## Watch the Live [Demo](https://IamBisrutPyne.github.io/House-MD/)
+## Watch the Live [Demo](https://house-md-bp.netlify.app/)
 
 
 # 💥 How to Contribute
