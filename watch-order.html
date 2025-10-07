@@ -1,0 +1,1829 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>House M.D. — Watch Order Guide</title>
+    <meta
+      name="description"
+      content="Complete watch order guide for House M.D. - All 8 seasons, 177 episodes"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700;900&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://static.wikia.nocookie.net/house/images/4/4a/Site-favicon.ico"
+    />
+    <style>
+      :root {
+        --bg: #0f1724;
+        --card: rgba(255, 255, 255, 0.04);
+        --muted: rgba(255, 255, 255, 0.65);
+        --accent: #e04f5f;
+        --accent-2: #2bd4c6;
+        --glass: rgba(255, 255, 255, 0.06);
+        --glass-strong: rgba(255, 255, 255, 0.1);
+        --max-width: 1100px;
+        --radius: 14px;
+        --shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      body {
+        font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+        background: radial-gradient(
+            1200px 600px at 10% 10%,
+            rgba(224, 79, 95, 0.06),
+            transparent
+          ),
+          linear-gradient(180deg, #07101a 0%, var(--bg) 60%);
+        color: #e6edf3;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.45;
+      }
+      .container {
+        width: min(95%, var(--max-width));
+        margin: 0 auto;
+      }
+      header {
+        padding: 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: var(--bg);
+        padding: 24px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .logo .mark {
+        width: 56px;
+        height: 56px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, var(--accent), #ff7a8a);
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+        font-family: "Playfair Display";
+        font-size: 20px;
+        box-shadow: var(--shadow);
+      }
+      .logo .mark img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        display: block;
+      }
+      nav {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+      }
+      nav a {
+        color: var(--muted);
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s;
+      }
+      nav a:hover,
+      nav a.active {
+        color: var(--accent);
+      }
+      .nav-toggle {
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        z-index: 20;
+      }
+      .nav-toggle .bar {
+        width: 100%;
+        height: 3px;
+        background: #e6edf3;
+        border-radius: 1px;
+        transition: all 0.3s ease-in-out;
+        transform-origin: 1px;
+      }
+      .page-header {
+        margin: 40px 0;
+        text-align: center;
+      }
+      .page-header h1 {
+        font-family: "Playfair Display";
+        font-size: 48px;
+        margin: 0 0 12px 0;
+        letter-spacing: -0.5px;
+      }
+      .page-header p {
+        color: var(--muted);
+        font-size: 18px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+      .watch-order-list {
+        background: var(--glass);
+        margin: 30px 0;
+        padding: 22px 28px;
+        border-radius: var(--radius);
+        border: 1px solid rgba(255, 255, 255, 0.07);
+      }
+      .watch-order-list ol {
+        margin: 0 0 0 22px;
+      }
+      .watch-order-list h2 {
+        font-family: "Playfair Display";
+        margin-top: 0;
+      }
+      .watch-order-list p {
+        color: var(--muted);
+        margin-top: 10px;
+      }
+      .stats-bar {
+        display: flex;
+        gap: 15px;
+        margin: 30px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .stat-item {
+        background: var(--glass);
+        padding: 16px 24px;
+        border-radius: 12px;
+        text-align: center;
+        min-width: 140px;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .stat-item .number {
+        font-size: 32px;
+        font-weight: 900;
+        color: var(--accent-2);
+        margin-bottom: 4px;
+      }
+      .stat-item .label {
+        font-size: 13px;
+        color: var(--muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      .watch-intro {
+        background: linear-gradient(
+          135deg,
+          rgba(43, 212, 198, 0.08),
+          rgba(224, 79, 95, 0.08)
+        );
+        padding: 28px;
+        border-radius: var(--radius);
+        margin: 30px 0;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      .watch-intro h2 {
+        font-family: "Playfair Display";
+        margin: 0 0 12px 0;
+        font-size: 24px;
+      }
+      .watch-intro p {
+        color: var(--muted);
+        margin: 8px 0;
+      }
+      .search-filter {
+        margin: 30px 0;
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .search-input {
+        flex: 1;
+        min-width: 250px;
+        padding: 14px 18px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--glass);
+        color: #e6edf3;
+        font-family: inherit;
+        font-size: 15px;
+      }
+      .search-input:focus {
+        outline: 2px solid var(--accent-2);
+        outline-offset: 2px;
+      }
+      .filter-btn {
+        padding: 14px 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        background: var(--glass);
+        color: var(--muted);
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+      .filter-btn:hover,
+      .filter-btn.active {
+        background: linear-gradient(90deg, var(--accent), #ff8a93);
+        color: #fff;
+        border-color: var(--accent);
+      }
+      .seasons-container {
+        margin: 30px 0 60px 0;
+      }
+      .season-block {
+        margin-bottom: 40px;
+        background: var(--card);
+        border-radius: var(--radius);
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.03);
+      }
+      .season-header {
+        background: linear-gradient(
+          135deg,
+          rgba(43, 212, 198, 0.12),
+          rgba(224, 79, 95, 0.12)
+        );
+        padding: 24px 28px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.3s;
+      }
+      .season-header:hover {
+        background: linear-gradient(
+          135deg,
+          rgba(43, 212, 198, 0.18),
+          rgba(224, 79, 95, 0.18)
+        );
+      }
+      .season-title {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .season-number {
+        font-size: 42px;
+        font-weight: 900;
+        font-family: "Playfair Display";
+        color: var(--accent);
+        line-height: 1;
+      }
+      .season-info h3 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 800;
+      }
+      .season-info p {
+        margin: 4px 0 0 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .season-meta {
+        text-align: right;
+      }
+      .season-meta .episode-count {
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--accent-2);
+      }
+      .season-meta .year {
+        color: var(--muted);
+        font-size: 13px;
+      }
+      .toggle-icon {
+        font-size: 24px;
+        transition: transform 0.3s;
+        color: var(--accent-2);
+      }
+      .season-block.expanded .toggle-icon {
+        transform: rotate(180deg);
+      }
+      .episodes-list {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+      }
+      .season-block.expanded .episodes-list {
+        max-height: 5000px;
+      }
+      .episode-item {
+        padding: 18px 28px;
+        border-top: 1px solid rgba(255, 255, 255, 0.03);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background 0.3s;
+      }
+      .episode-item:hover {
+        background: var(--glass);
+      }
+      .episode-main {
+        flex: 1;
+      }
+      .episode-number {
+        font-size: 13px;
+        color: var(--accent-2);
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .episode-title {
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 4px;
+      }
+      .episode-description {
+        font-size: 14px;
+        color: var(--muted);
+        margin: 0;
+      }
+      .episode-date {
+        font-size: 13px;
+        color: var(--muted);
+        text-align: right;
+        min-width: 100px;
+      }
+      .no-results {
+        text-align: center;
+        padding: 60px 20px;
+        color: var(--muted);
+      }
+      .no-results .icon {
+        font-size: 64px;
+        margin-bottom: 16px;
+        opacity: 0.3;
+      }
+      footer {
+        padding: 40px 0 60px 0;
+        color: var(--muted);
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: 60px;
+      }
+      footer a {
+        color: var(--accent);
+      }
+      @media (max-width: 768px) {
+        .nav-toggle {
+          display: flex;
+        }
+        nav {
+          position: fixed;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          z-index: 10;
+          width: min(70vw, 300px);
+          background: var(--bg);
+          padding-top: 80px;
+          flex-direction: column;
+          gap: 20px;
+          box-shadow: -4px 0 10px rgba(0, 0, 0, 0.4);
+          transform: translateX(100%);
+          transition: transform 0.3s ease-out;
+        }
+        nav[data-visible="true"] {
+          transform: translateX(0);
+        }
+        nav a {
+          padding: 10px 20px;
+          width: 100%;
+          text-align: center;
+        }
+        .nav-toggle[aria-expanded="true"] .bar:nth-child(1) {
+          transform: rotate(45deg);
+        }
+        .nav-toggle[aria-expanded="true"] .bar:nth-child(2) {
+          opacity: 0;
+        }
+        .nav-toggle[aria-expanded="true"] .bar:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+        header {
+          position: sticky;
+          top: 0;
+          background: var(--bg);
+          z-index: 30;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .page-header h1 {
+          font-size: 36px;
+        }
+        .season-header {
+          padding: 20px;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+        .season-meta {
+          text-align: left;
+          width: 100%;
+        }
+        .episode-item {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 8px;
+          padding: 16px 20px;
+        }
+        .episode-date {
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <div class="mark">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/59/HouseMD-logo.svg"
+              alt=""
+              class="src"
+            />
+          </div>
+          <div>
+            <div style="font-weight: 900">HOUSE M.D.</div>
+            <div style="font-size: 12px; color: var(--muted); margin-top: 2px">
+              A fan-made landing page
+            </div>
+          </div>
+        </div>
+        <nav id="main-nav" data-visible="false" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About</a>
+          <a href="index.html#characters">Characters</a>
+          <a href="watch-order.html" class="active">Watch Order</a>
+          <a href="index.html#diagnostic-game">Diagnostic Game</a>
+        </nav>
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          title="Menu"
+        >
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </header>
+
+      <div class="page-header">
+        <h1>Complete Watch Order</h1>
+        <p>
+          All 8 seasons, 177 episodes of diagnostic brilliance. Watch in
+          chronological order for the full House M.D. experience.
+        </p>
+      </div>
+
+      <!-- RECOMMENDED WATCH ORDER SECTION -->
+      <!-- <div class="watch-order-list">
+            <h2>Recommended Watching Order</h2>
+            <ol>
+                <li>Season 1 (Episodes 1–22)</li>
+                <li>Season 2 (Episodes 1–24)</li>
+                <li>Season 3 (Episodes 1–24)</li>
+                <li>Season 4 (Episodes 1–16)</li>
+                <li>Season 5 (Episodes 1–24)</li>
+                <li>Season 6 (Episodes 1–21)</li>
+                <li>Season 7 (Episodes 1–23)</li>
+                <li>Season 8 (Episodes 1–22)</li>
+            </ol>
+            <p>Watch each season, in order, from episode 1 to the last episode for the best experience.</p>
+        </div> -->
+
+      <div class="stats-bar">
+        <div class="stat-item">
+          <div class="number">8</div>
+          <div class="label">Seasons</div>
+        </div>
+        <div class="stat-item">
+          <div class="number">177</div>
+          <div class="label">Episodes</div>
+        </div>
+        <div class="stat-item">
+          <div class="number">2004-2012</div>
+          <div class="label">Years</div>
+        </div>
+      </div>
+
+      <div class="watch-intro">
+        <h2>How to Watch</h2>
+        <p>
+          📺 <strong>Recommended Order:</strong> Chronological (Season 1 →
+          Season 8)
+        </p>
+        <p>⏱️ <strong>Average Episode Length:</strong> 44 minutes</p>
+        <p>
+          💡 <strong>Pro Tip:</strong> Watch through in order to fully
+          appreciate character development, ongoing storylines, and House's
+          complex relationships with his team.
+        </p>
+      </div>
+
+      <div class="search-filter">
+        <input
+          type="text"
+          class="search-input"
+          id="searchInput"
+          placeholder="Search episodes by title or number..."
+        />
+        <button class="filter-btn active" data-filter="all">All Seasons</button>
+        <button class="filter-btn" id="expandAll">Expand All</button>
+        <button class="filter-btn" id="collapseAll">Collapse All</button>
+      </div>
+
+      <div class="seasons-container" id="seasonsContainer"></div>
+
+      <footer>
+        <strong>House M.D. Watch Order Guide</strong>
+        <div style="margin-top: 12px; font-size: 13px">
+          This is an unofficial fan-made page. All rights to House M.D. belong
+          to their respective owners.
+          <br />Built with ♥ & 🍵
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      const seasonsData = [
+        {
+          season: 1,
+          episodes: 22,
+          year: "2004-2005",
+          description:
+            "House and his team solve medical mysteries while navigating hospital politics.",
+          episodeList: [
+            {
+              num: 1,
+              title: "Pilot",
+              date: "Nov 16, 2004",
+              desc: "House diagnoses a kindergarten teacher with a puzzling illness.",
+            },
+            {
+              num: 2,
+              title: "Paternity",
+              date: "Nov 23, 2004",
+              desc: "A teenager collapses; genetic clues complicate diagnosis.",
+            },
+            {
+              num: 3,
+              title: "Occam's Razor",
+              date: "Nov 30, 2004",
+              desc: "A college student's multi-symptom case forces a simple-vs-complex debate.",
+            },
+            {
+              num: 4,
+              title: "Maternity",
+              date: "Dec 7, 2004",
+              desc: "An outbreak in the maternity ward threatens newborns.",
+            },
+            {
+              num: 5,
+              title: "Damned If You Do",
+              date: "Dec 14, 2004",
+              desc: "A nun's refusal of tests creates an ethical and medical puzzle.",
+            },
+            {
+              num: 6,
+              title: "The Socratic Method",
+              date: "Dec 21, 2004",
+              desc: "A mentally ill patient develops dangerous new symptoms.",
+            },
+            {
+              num: 7,
+              title: "Fidelity",
+              date: "Dec 28, 2004",
+              desc: "A patient's illness uncovers secrets and relationship strains.",
+            },
+            {
+              num: 8,
+              title: "Poison",
+              date: "Jan 25, 2005",
+              desc: "A child's collapse looks like poisoning but hides another cause.",
+            },
+            {
+              num: 9,
+              title: "DNR",
+              date: "Feb 1, 2005",
+              desc: "A jazz musician with ALS refuses treatment, prompting ethical debate.",
+            },
+            {
+              num: 10,
+              title: "Histories",
+              date: "Feb 8, 2005",
+              desc: "A homeless woman's vague history masks a treatable condition.",
+            },
+            {
+              num: 11,
+              title: "Detox",
+              date: "Feb 15, 2005",
+              desc: "House attempts to stay off Vicodin while treating a patient.",
+            },
+            {
+              num: 12,
+              title: "Sports Medicine",
+              date: "Feb 22, 2005",
+              desc: "A baseball player's injury hides an unexpected diagnosis.",
+            },
+            {
+              num: 13,
+              title: "Cursed",
+              date: "Mar 1, 2005",
+              desc: "A grieving boy believes he's cursed after his father's death.",
+            },
+            {
+              num: 14,
+              title: "Control",
+              date: "Mar 8, 2005",
+              desc: "A successful woman collapses; symptoms confound the team.",
+            },
+            {
+              num: 15,
+              title: "Mob Rules",
+              date: "Mar 15, 2005",
+              desc: "A mob informant's survival depends on a correct diagnosis.",
+            },
+            {
+              num: 16,
+              title: "Heavy",
+              date: "Mar 22, 2005",
+              desc: "An obese teen's medical issues challenge assumptions.",
+            },
+            {
+              num: 17,
+              title: "Role Model",
+              date: "Apr 12, 2005",
+              desc: "A politician's illness becomes politically charged.",
+            },
+            {
+              num: 18,
+              title: "Babies & Bathwater",
+              date: "Apr 19, 2005",
+              desc: "A faith healer's patient reveals an uncommon condition.",
+            },
+            {
+              num: 19,
+              title: "Kids",
+              date: "May 3, 2005",
+              desc: "A young athlete's worsening condition pushes the team to re-evaluate.",
+            },
+            {
+              num: 20,
+              title: "Love Hurts",
+              date: "May 10, 2005",
+              desc: "A couple shares mysterious matching symptoms.",
+            },
+            {
+              num: 21,
+              title: "Three Stories",
+              date: "May 17, 2005",
+              desc: "House teaches via three cases while revealing his past.",
+            },
+            {
+              num: 22,
+              title: "Honeymoon",
+              date: "May 24, 2005",
+              desc: "A newlywed returns from her honeymoon critically ill.",
+            },
+          ],
+        },
+
+        {
+          season: 2,
+          episodes: 24,
+          year: "2005-2006",
+          description:
+            "House faces new challenges as relationships evolve and cases intensify.",
+          episodeList: [
+            {
+              num: 1,
+              title: "Acceptance",
+              date: "Sep 13, 2005",
+              desc: "House treats a death-row inmate while the team adjusts to change.",
+            },
+            {
+              num: 2,
+              title: "Autopsy",
+              date: "Sep 20, 2005",
+              desc: "A teen cancer patient hallucinating leads to an unusual diagnosis.",
+            },
+            {
+              num: 3,
+              title: "Humpty Dumpty",
+              date: "Sep 27, 2005",
+              desc: "A daredevil's fall reveals hidden medical and personal issues.",
+            },
+            {
+              num: 4,
+              title: "TB or Not TB",
+              date: "Nov 1, 2005",
+              desc: "A humanitarian doctor's illness raises TB concerns.",
+            },
+            {
+              num: 5,
+              title: "Daddy's Boy",
+              date: "Nov 8, 2005",
+              desc: "A young man's symptoms test father-son dynamics.",
+            },
+            {
+              num: 6,
+              title: "Spin",
+              date: "Nov 15, 2005",
+              desc: "A pro cyclist collapses mid-race; the team races to find why.",
+            },
+            {
+              num: 7,
+              title: "Hunting",
+              date: "Nov 22, 2005",
+              desc: "A hunter's tick-borne presentation hides an unusual cause.",
+            },
+            {
+              num: 8,
+              title: "The Mistake",
+              date: "Nov 29, 2005",
+              desc: "A past error resurfaces with serious consequences for Chase.",
+            },
+            {
+              num: 9,
+              title: "Deception",
+              date: "Dec 13, 2005",
+              desc: "A woman's double life complicates diagnosis and trust.",
+            },
+            {
+              num: 10,
+              title: "Failure to Communicate",
+              date: "Jan 10, 2006",
+              desc: "House develops aphasia while trying to treat patients.",
+            },
+            {
+              num: 11,
+              title: "Need to Know",
+              date: "Feb 7, 2006",
+              desc: "A patient's illness threatens her relationship.",
+            },
+            {
+              num: 12,
+              title: "Distractions",
+              date: "Feb 14, 2006",
+              desc: "House treats a case while battling his own pain.",
+            },
+            {
+              num: 13,
+              title: "Skin Deep",
+              date: "Feb 21, 2006",
+              desc: "A teen model's collapse uncovers dangerous behavior.",
+            },
+            {
+              num: 14,
+              title: "Sex Kills",
+              date: "Mar 7, 2006",
+              desc: "Risky sexual activity reveals an underlying medical cause.",
+            },
+            {
+              num: 15,
+              title: "Clueless",
+              date: "Mar 28, 2006",
+              desc: "A devoted husband's sudden symptoms confuse everyone.",
+            },
+            {
+              num: 16,
+              title: "Safe",
+              date: "Apr 4, 2006",
+              desc: "Severe allergic reactions push the team to hunt for triggers.",
+            },
+            {
+              num: 17,
+              title: "All In",
+              date: "Apr 11, 2006",
+              desc: "A young gambler's collapse leads to an odd investigation.",
+            },
+            {
+              num: 18,
+              title: "Sleeping Dogs Lie",
+              date: "Apr 25, 2006",
+              desc: "A woman's case exposes painful relationship secrets.",
+            },
+            {
+              num: 19,
+              title: "House vs. God",
+              date: "Apr 25, 2006",
+              desc: "A teen faith healer becomes critically ill.",
+            },
+            {
+              num: 20,
+              title: "Euphoria, Part 1",
+              date: "May 2, 2006",
+              desc: "A police officer's intoxicating behavior hides danger.",
+            },
+            {
+              num: 21,
+              title: "Euphoria, Part 2",
+              date: "May 2, 2006",
+              desc: "The euphoria case continues with high stakes for Foreman.",
+            },
+            {
+              num: 22,
+              title: "Forever",
+              date: "May 9, 2006",
+              desc: "A woman's memories contradict physical findings.",
+            },
+            {
+              num: 23,
+              title: "Who's Your Daddy?",
+              date: "May 16, 2006",
+              desc: "Paternity questions surface amid a medical mystery.",
+            },
+            {
+              num: 24,
+              title: "No Reason",
+              date: "May 23, 2006",
+              desc: "House is shot; the finale challenges reality and motive.",
+            },
+          ],
+        },
+
+        {
+          season: 3,
+          episodes: 24,
+          year: "2006-2007",
+          description:
+            "Recovery and rivalry define this season as House returns from trauma.",
+          episodeList: [
+            {
+              num: 1,
+              title: "Meaning",
+              date: "Sep 5, 2006",
+              desc: "A woman with unusual symptoms prompts investigation.",
+            },
+            {
+              num: 2,
+              title: "Cane and Able",
+              date: "Sep 12, 2006",
+              desc: "House contends with his leg and the team's dynamics.",
+            },
+            {
+              num: 3,
+              title: "Informed Consent",
+              date: "Sep 19, 2006",
+              desc: "A patient's request forces ethical debate about treatment.",
+            },
+            {
+              num: 4,
+              title: "Lines in the Sand",
+              date: "Sep 26, 2006",
+              desc: "A child with autism presents a baffling medical case.",
+            },
+            {
+              num: 5,
+              title: "Fools for Love",
+              date: "Oct 3, 2006",
+              desc: "House treats a man with risky behavior and complex history.",
+            },
+            {
+              num: 6,
+              title: "Que Será Será",
+              date: "Oct 10, 2006",
+              desc: "A former patient returns with new symptoms that concern House.",
+            },
+            {
+              num: 7,
+              title: "Son of Coma Guy",
+              date: "Oct 17, 2006",
+              desc: "An unusual donor case puts House's judgment on trial.",
+            },
+            {
+              num: 8,
+              title: "Whac-A-Mole",
+              date: "Oct 24, 2006",
+              desc: "A patient with unexplained muscle issues challenges diagnosis.",
+            },
+            {
+              num: 9,
+              title: "Finding Judas",
+              date: "Nov 14, 2006",
+              desc: "House faces a case involving moral compromise.",
+            },
+            {
+              num: 10,
+              title: "Merry Little Christmas",
+              date: "Dec 12, 2006",
+              desc: "Holiday routines are disrupted by a medical emergency.",
+            },
+            {
+              num: 11,
+              title: "Words and Deeds",
+              date: "Jan 2, 2007",
+              desc: "House's behavior brings professional consequences.",
+            },
+            {
+              num: 12,
+              title: "One Day, One Room",
+              date: "Jan 16, 2007",
+              desc: "House holds a profound conversation with a patient.",
+            },
+            {
+              num: 13,
+              title: "Needle in a Haystack",
+              date: "Feb 13, 2007",
+              desc: "An exotic parasite is suspected in a puzzling case.",
+            },
+            {
+              num: 14,
+              title: "Insensitive",
+              date: "Feb 20, 2007",
+              desc: "A man allergic to his own sweat forces diagnostic creativity.",
+            },
+            {
+              num: 15,
+              title: "Insensitivity",
+              date: "Feb 27, 2007",
+              desc: "House treats an insomniac with mysterious symptoms.",
+            },
+            {
+              num: 16,
+              title: "Fetal Position",
+              date: "Mar 13, 2007",
+              desc: "A pregnant patient challenges ethics and treatment.",
+            },
+            {
+              num: 17,
+              title: "Act Your Age",
+              date: "Mar 20, 2007",
+              desc: "An elderly patient's case overlaps with identity issues.",
+            },
+            {
+              num: 18,
+              title: "Top Secret",
+              date: "Mar 27, 2007",
+              desc: "A patient with a secretive lifestyle complicates diagnosis.",
+            },
+            {
+              num: 19,
+              title: "Airborne",
+              date: "Apr 17, 2007",
+              desc: "A plane incident creates an infectious-disease scare.",
+            },
+            {
+              num: 20,
+              title: "Fools for Love (repeat)",
+              date: "Apr 24, 2007",
+              desc: "Continuation of earlier character-driven dilemmas.",
+            },
+            {
+              num: 21,
+              title: "The Jerk",
+              date: "May 1, 2007",
+              desc: "A manipulative patient pushes ethical boundaries.",
+            },
+            {
+              num: 22,
+              title: "Family",
+              date: "May 8, 2007",
+              desc: "House confronts family-related medical and personal issues.",
+            },
+            {
+              num: 23,
+              title: "Dying Changes Everything",
+              date: "May 15, 2007",
+              desc: "A patient redefines what quality of life means.",
+            },
+            {
+              num: 24,
+              title: "Human Error",
+              date: "May 29, 2007",
+              desc: "Season finale centers on consequences of choices.",
+            },
+          ],
+        },
+
+        {
+          season: 4,
+          episodes: 16,
+          year: "2007-2008",
+          description:
+            "House assembles a new team through an unconventional hiring process.",
+          episodeList: [
+            {
+              num: 1,
+              title: "Alone",
+              date: "Sep 25, 2007",
+              desc: "House returns to work and faces new staffing decisions.",
+            },
+            {
+              num: 2,
+              title: "The Right Stuff",
+              date: "Oct 2, 2007",
+              desc: "House narrows candidates in his search for new team members.",
+            },
+            {
+              num: 3,
+              title: "97 Seconds",
+              date: "Oct 9, 2007",
+              desc: "An inmate's blackout leads to a time-sensitive diagnosis.",
+            },
+            {
+              num: 4,
+              title: "Guardian Angels",
+              date: "Oct 16, 2007",
+              desc: "House evaluates candidate behavior and patient care.",
+            },
+            {
+              num: 5,
+              title: "Mirror Mirror",
+              date: "Oct 23, 2007",
+              desc: "A mirror injury reveals deeper medical issues.",
+            },
+            {
+              num: 6,
+              title: "Whatever It Takes",
+              date: "Oct 30, 2007",
+              desc: "Candidates compete under pressure in the diagnostic suite.",
+            },
+            {
+              num: 7,
+              title: "Ugly",
+              date: "Nov 6, 2007",
+              desc: "A return to medical ethics with a high-profile patient.",
+            },
+            {
+              num: 8,
+              title: "You Don't Want to Know",
+              date: "Nov 13, 2007",
+              desc: "A doctor's secret leads to dangerous consequences.",
+            },
+            {
+              num: 9,
+              title: "Games",
+              date: "Nov 20, 2007",
+              desc: "House fires a candidate as tensions peak in the selection process.",
+            },
+            {
+              num: 10,
+              title: "It's a Wonderful Lie",
+              date: "Dec 4, 2007",
+              desc: "House tests a candidate with a fabricated case.",
+            },
+            {
+              num: 11,
+              title: "Frozen",
+              date: "Feb 5, 2008",
+              desc: "House treats a patient in the Arctic; the team adjusts back home.",
+            },
+            {
+              num: 12,
+              title: "Don't Ever Change",
+              date: "Feb 12, 2008",
+              desc: "A patient's plastic surgery obsession masks deeper problems.",
+            },
+            {
+              num: 13,
+              title: "No More Mr. Nice Guy",
+              date: "Mar 4, 2008",
+              desc: "House navigates team dynamics and patient deception.",
+            },
+            {
+              num: 14,
+              title: "Living the Dream",
+              date: "Apr 1, 2008",
+              desc: "House deals with a celebrity patient and expectations.",
+            },
+            {
+              num: 15,
+              title: "House's Head",
+              date: "May 5, 2008",
+              desc: "House wakes with memory gaps after a crash; a mystery unfolds.",
+            },
+            {
+              num: 16,
+              title: "Wilson's Heart",
+              date: "May 12, 2008",
+              desc: "Season-ending fallout from the crash with emotional consequences.",
+            },
+          ],
+        },
+
+        {
+          season: 5,
+          episodes: 24,
+          year: "2008-2009",
+          description:
+            "The new team settles in as House faces personal demons.",
+          episodeList: [
+            {
+              num: 1,
+              title: "Dying Changes Everything",
+              date: "Sep 16, 2008",
+              desc: "House's team confronts ethical tensions after a patient's death.",
+            },
+            {
+              num: 2,
+              title: "Big Baby",
+              date: "Sep 23, 2008",
+              desc: "A patient with unusual symptoms reveals surprising causes.",
+            },
+            {
+              num: 3,
+              title: "Waiting Room",
+              date: "Sep 30, 2008",
+              desc: "A single ER waiting room captures many human dramas.",
+            },
+            {
+              num: 4,
+              title: "Birthmarks",
+              date: "Oct 7, 2008",
+              desc: "House travels to his father's funeral and faces personal history.",
+            },
+            {
+              num: 5,
+              title: "Lucky Thirteen",
+              date: "Oct 21, 2008",
+              desc: "Thirteen's risky lifestyle becomes central to a case.",
+            },
+            {
+              num: 6,
+              title: "Joy",
+              date: "Oct 28, 2008",
+              desc: "House's behavior escalates as he chases a personal high.",
+            },
+            {
+              num: 7,
+              title: "The Itch",
+              date: "Nov 4, 2008",
+              desc: "An obsessive itch leads to unexpected diagnosis.",
+            },
+            {
+              num: 8,
+              title: "Emancipation",
+              date: "Nov 11, 2008",
+              desc: "A pregnant teenager's case tests the team's limits.",
+            },
+            {
+              num: 9,
+              title: "Last Resort",
+              date: "Nov 18, 2008",
+              desc: "A man barricades himself in the hospital with demands.",
+            },
+            {
+              num: 10,
+              title: "Let Them Eat Cake",
+              date: "Nov 25, 2008",
+              desc: "House's antics cause chaos in the diagnostic process.",
+            },
+            {
+              num: 11,
+              title: "Joy to the World",
+              date: "Dec 2, 2008",
+              desc: "Holiday complications bring medical surprises.",
+            },
+            {
+              num: 12,
+              title: "Painless",
+              date: "Jan 13, 2009",
+              desc: "A patient reports complete insensitivity to pain.",
+            },
+            {
+              num: 13,
+              title: "Big Baby (repeat)",
+              date: "Jan 20, 2009",
+              desc: "Continued fallout from earlier cases and relationships.",
+            },
+            {
+              num: 14,
+              title: "The Greater Good",
+              date: "Jan 27, 2009",
+              desc: "House risks reputation to uncover a diagnosis.",
+            },
+            {
+              num: 15,
+              title: "Unfaithful",
+              date: "Feb 10, 2009",
+              desc: "Adultery and illness intersect in a complex case.",
+            },
+            {
+              num: 16,
+              title: "Under My Skin",
+              date: "Feb 17, 2009",
+              desc: "House faces hallucinations and personal danger.",
+            },
+            {
+              num: 17,
+              title: "Both Sides Now",
+              date: "Mar 10, 2009",
+              desc: "House's relationships cause professional strain.",
+            },
+            {
+              num: 18,
+              title: "Locked In",
+              date: "Mar 17, 2009",
+              desc: "A doctor who is fully conscious but can't move forces new thinking.",
+            },
+            {
+              num: 19,
+              title: "Simple Explanation",
+              date: "Apr 14, 2009",
+              desc: "A sudden death in the hospital shocks the team.",
+            },
+            {
+              num: 20,
+              title: "Saviors",
+              date: "Apr 21, 2009",
+              desc: "A veteran missionary's condition leads to moral dilemmas.",
+            },
+            {
+              num: 21,
+              title: "Crossing the Line",
+              date: "Apr 28, 2009",
+              desc: "Boundaries are tested as a case gets personal.",
+            },
+            {
+              num: 22,
+              title: "Resignation",
+              date: "May 5, 2009",
+              desc: "House makes drastic choices about his career.",
+            },
+            {
+              num: 23,
+              title: "Under My Skin (repeat)",
+              date: "May 12, 2009",
+              desc: "Tension rises as House confronts addiction and limits.",
+            },
+            {
+              num: 24,
+              title: "Both Sides Now (repeat)",
+              date: "May 19, 2009",
+              desc: "Season ends with difficult emotional consequences.",
+            },
+          ],
+        },
+
+        {
+          season: 6,
+          episodes: 21,
+          year: "2009-2010",
+          description: "House seeks redemption while treating complex cases.",
+          episodeList: [
+            {
+              num: 1,
+              title: "Broken",
+              date: "Sep 21, 2009",
+              desc: "Two-part premiere. House undergoes rehabilitation and self-examination.",
+            },
+            {
+              num: 2,
+              title: "Epic Fail",
+              date: "Sep 28, 2009",
+              desc: "House confronts new challenges as he returns to work.",
+            },
+            {
+              num: 3,
+              title: "The Tyrant",
+              date: "Oct 5, 2009",
+              desc: "A patient with authoritarian tendencies reveals a hidden diagnosis.",
+            },
+            {
+              num: 4,
+              title: "Instant Karma",
+              date: "Oct 12, 2009",
+              desc: "A soldier's mystery illness intersects with karma and consequence.",
+            },
+            {
+              num: 5,
+              title: "Brave Heart",
+              date: "Oct 19, 2009",
+              desc: "A heart surgeon's case forces difficult decisions.",
+            },
+            {
+              num: 6,
+              title: "Known Unknowns",
+              date: "Nov 2, 2009",
+              desc: "A case with shifting facts tests the team.",
+            },
+            {
+              num: 7,
+              title: "Teamwork",
+              date: "Nov 9, 2009",
+              desc: "House learns to rely on his team for a complex case.",
+            },
+            {
+              num: 8,
+              title: "Ignorance Is Bliss",
+              date: "Nov 16, 2009",
+              desc: "A global disease scare triggers unusual patient behavior.",
+            },
+            {
+              num: 9,
+              title: "Wilson",
+              date: "Nov 23, 2009",
+              desc: "An episode focused on Wilson and his personal crisis.",
+            },
+            {
+              num: 10,
+              title: "The Down Low",
+              date: "Jan 11, 2010",
+              desc: "A secretive life leads to an unexpected diagnosis.",
+            },
+            {
+              num: 11,
+              title: "Remember the Players",
+              date: "Jan 18, 2010",
+              desc: "House reconnects with his past while solving a case.",
+            },
+            {
+              num: 12,
+              title: "Lockdown",
+              date: "Feb 1, 2010",
+              desc: "The hospital is locked down after a security breach.",
+            },
+            {
+              num: 13,
+              title: "Moving On",
+              date: "Feb 8, 2010",
+              desc: "House faces decisions about his relationships and career.",
+            },
+            {
+              num: 14,
+              title: "5 to 9",
+              date: "Feb 22, 2010",
+              desc: "Wilson's perspective shows the fallout of recent events.",
+            },
+            {
+              num: 15,
+              title: "Black Hole",
+              date: "Mar 1, 2010",
+              desc: "A surgeon's dark secret surfaces during treatment.",
+            },
+            {
+              num: 16,
+              title: "Lockdown (repeat)",
+              date: "Mar 8, 2010",
+              desc: "Continued institutional crisis affects patient care.",
+            },
+            {
+              num: 17,
+              title: "Knight Fall",
+              date: "Mar 22, 2010",
+              desc: "A case involving a priest forces moral questions.",
+            },
+            {
+              num: 18,
+              title: "Open and Shut",
+              date: "Apr 12, 2010",
+              desc: "A seemingly clear diagnosis hides complications.",
+            },
+            {
+              num: 19,
+              title: "Holding On",
+              date: "Apr 19, 2010",
+              desc: "Relationships are tested as cases intensify.",
+            },
+            {
+              num: 20,
+              title: "Help Me",
+              date: "May 17, 2010",
+              desc: "Season finale: disaster response and heartbreaking choices.",
+            },
+            {
+              num: 21,
+              title: "Broken (Part 2)",
+              date: "May 24, 2010",
+              desc: "Continuation/conclusion of House's personal arc.",
+            },
+          ],
+        },
+
+        {
+          season: 7,
+          episodes: 23,
+          year: "2010-2011",
+          description:
+            "Relationships evolve and House faces new personal challenges.",
+          episodeList: [
+            {
+              num: 1,
+              title: "Now What?",
+              date: "Sep 20, 2010",
+              desc: "House adjusts to life after the previous season's events.",
+            },
+            {
+              num: 2,
+              title: "Selfish",
+              date: "Sep 27, 2010",
+              desc: "House returns to diagnostics with complicated motives.",
+            },
+            {
+              num: 3,
+              title: "Unwritten",
+              date: "Oct 4, 2010",
+              desc: "A patient with religious ties forces moral debate.",
+            },
+            {
+              num: 4,
+              title: "Massage Therapy",
+              date: "Oct 11, 2010",
+              desc: "An unexpected injury reveals a deeper illness.",
+            },
+            {
+              num: 5,
+              title: "Unplanned Parenthood",
+              date: "Oct 18, 2010",
+              desc: "Family secrets surface amid a medical case.",
+            },
+            {
+              num: 6,
+              title: "Office Politics",
+              date: "Nov 1, 2010",
+              desc: "Hospital politics complicate patient care.",
+            },
+            {
+              num: 7,
+              title: "A Pox on Our House",
+              date: "Nov 8, 2010",
+              desc: "An infectious outbreak tests hospital protocols.",
+            },
+            {
+              num: 8,
+              title: "Small Sacrifices",
+              date: "Nov 15, 2010",
+              desc: "A case forces personal sacrifices from the team.",
+            },
+            {
+              num: 9,
+              title: "Larger Than Life",
+              date: "Nov 22, 2010",
+              desc: "A performance artist's illness confounds the team.",
+            },
+            {
+              num: 10,
+              title: "Carrot or Stick",
+              date: "Dec 6, 2010",
+              desc: "House experiments with motivation during a case.",
+            },
+            {
+              num: 11,
+              title: "Family Practice",
+              date: "Jan 10, 2011",
+              desc: "Foreman's family becomes central to diagnosis.",
+            },
+            {
+              num: 12,
+              title: "You Must Remember This",
+              date: "Jan 17, 2011",
+              desc: "A memory disorder complicates a medical mystery.",
+            },
+            {
+              num: 13,
+              title: "Out of the Chute",
+              date: "Feb 7, 2011",
+              desc: "House supports a boxer who collapses in the ring.",
+            },
+            {
+              num: 14,
+              title: "Recession Proof",
+              date: "Feb 14, 2011",
+              desc: "Economic pressures influence medical decisions.",
+            },
+            {
+              num: 15,
+              title: "Bombshells",
+              date: "Mar 7, 2011",
+              desc: "Personal revelations upend the team's dynamics.",
+            },
+            {
+              num: 16,
+              title: "Fall from Grace",
+              date: "Mar 14, 2011",
+              desc: "A patient's dangerous behavior ties into past trauma.",
+            },
+            {
+              num: 17,
+              title: "The Dig",
+              date: "Apr 4, 2011",
+              desc: "A re-investigation brings unexpected findings.",
+            },
+            {
+              num: 18,
+              title: "Larger Than Life (repeat)",
+              date: "Apr 11, 2011",
+              desc: "Further fallout from earlier dramatic cases.",
+            },
+            {
+              num: 19,
+              title: "Last Temptation",
+              date: "Apr 18, 2011",
+              desc: "House faces personal and professional temptations.",
+            },
+            {
+              num: 20,
+              title: "Changes",
+              date: "Apr 25, 2011",
+              desc: "Shifts in relationships alter team dynamics.",
+            },
+            {
+              num: 21,
+              title: "Here Kitty",
+              date: "May 2, 2011",
+              desc: "A mysterious ailment ties to a personal history.",
+            },
+            {
+              num: 22,
+              title: "Holding On",
+              date: "May 9, 2011",
+              desc: "Tensions rise as characters confront truths.",
+            },
+            {
+              num: 23,
+              title: "Moving On",
+              date: "May 16, 2011",
+              desc: "Season closes with decisions about the future.",
+            },
+          ],
+        },
+
+        {
+          season: 8,
+          episodes: 22,
+          year: "2011-2012",
+          description:
+            "The final season brings House's journey to its conclusion.",
+          episodeList: [
+            {
+              num: 1,
+              title: "Twenty Vicodin",
+              date: "Sep 20, 2011",
+              desc: "House navigates life after rehab with twenty Vicodin pills.",
+            },
+            {
+              num: 2,
+              title: "Transplant",
+              date: "Sep 27, 2011",
+              desc: "A transplant patient presents complex immunological issues.",
+            },
+            {
+              num: 3,
+              title: "Charity Case",
+              date: "Oct 4, 2011",
+              desc: "A good Samaritan becomes House's patient with strange symptoms.",
+            },
+            {
+              num: 4,
+              title: "Risky Business",
+              date: "Oct 11, 2011",
+              desc: "House takes dangerous diagnostic gambles for a patient in trouble.",
+            },
+            {
+              num: 5,
+              title: "The Confession",
+              date: "Oct 18, 2011",
+              desc: "A confession complicates a patient's treatment.",
+            },
+            {
+              num: 6,
+              title: "Parents",
+              date: "Oct 25, 2011",
+              desc: "Family dynamics play a role in a puzzling case.",
+            },
+            {
+              num: 7,
+              title: "Dead & Buried",
+              date: "Nov 1, 2011",
+              desc: "A body discovery opens questions about cause and effect.",
+            },
+            {
+              num: 8,
+              title: "Perils of Paranoia",
+              date: "Nov 8, 2011",
+              desc: "Paranoid behavior masks an underlying illness.",
+            },
+            {
+              num: 9,
+              title: "Better Half",
+              date: "Nov 15, 2011",
+              desc: "A spouse's symptoms reveal a shared medical issue.",
+            },
+            {
+              num: 10,
+              title: "Runaways",
+              date: "Nov 22, 2011",
+              desc: "Missing teens bring an unusual infectious concern to the hospital.",
+            },
+            {
+              num: 11,
+              title: "Nobody's Fault",
+              date: "Jan 3, 2012",
+              desc: "A critical event forces the team to examine responsibility.",
+            },
+            {
+              num: 12,
+              title: "Chase",
+              date: "Jan 10, 2012",
+              desc: "An episode focused on Chase and his personal crisis.",
+            },
+            {
+              num: 13,
+              title: "Man of the House",
+              date: "Jan 17, 2012",
+              desc: "House faces leadership and liability questions.",
+            },
+            {
+              num: 14,
+              title: "Love Is Blind",
+              date: "Jan 24, 2012",
+              desc: "An outbreak among the blind points to a rare source.",
+            },
+            {
+              num: 15,
+              title: "Blowing the Whistle",
+              date: "Feb 7, 2012",
+              desc: "Whistleblowing leads to medical and ethical complications.",
+            },
+            {
+              num: 16,
+              title: "Gut Check",
+              date: "Feb 14, 2012",
+              desc: "A patient with GI symptoms hides a complex diagnosis.",
+            },
+            {
+              num: 17,
+              title: "We Need the Eggs",
+              date: "Feb 21, 2012",
+              desc: "A fertility case leads to unexpected medical issues.",
+            },
+            {
+              num: 18,
+              title: "Body & Soul",
+              date: "Feb 28, 2012",
+              desc: "A patient's spiritual life is central to the medical puzzle.",
+            },
+            {
+              num: 19,
+              title: "Post Mortem",
+              date: "Mar 13, 2012",
+              desc: "After a patient's death, a deeper mystery emerges.",
+            },
+            {
+              num: 20,
+              title: "Grief",
+              date: "Mar 20, 2012",
+              desc: "Grief reactions complicate diagnosis and care.",
+            },
+            {
+              num: 21,
+              title: "Holding On (repeat)",
+              date: "May 1, 2012",
+              desc: "Character arcs approach resolution.",
+            },
+            {
+              num: 22,
+              title: "Everybody Dies",
+              date: "May 21, 2012",
+              desc: "Series finale: House's final choices and ambiguous fate.",
+            },
+          ],
+        },
+      ];
+
+      function renderSeasons(data) {
+        const container = document.getElementById("seasonsContainer");
+        container.innerHTML = "";
+        data.forEach((season) => {
+          const seasonBlock = document.createElement("div");
+          seasonBlock.className = "season-block";
+          seasonBlock.dataset.season = season.season;
+          const episodesHTML = season.episodeList
+            .map(
+              (ep) => `
+                    <div class="episode-item" data-episode="${
+                      ep.num
+                    }" data-title="${ep.title.toLowerCase()}">
+                        <div class="episode-main">
+                            <div class="episode-number">Episode ${ep.num}</div>
+                            <div class="episode-title">${ep.title}</div>
+                            <p class="episode-description">${ep.desc}</p>
+                        </div>
+                        <div class="episode-date">${ep.date}</div>
+                    </div>
+                `
+            )
+            .join("");
+          seasonBlock.innerHTML = `
+                    <div class="season-header" onclick="toggleSeason(this)">
+                        <div class="season-title">
+                            <div class="season-number">${season.season}</div>
+                            <div class="season-info">
+                                <h3>Season ${season.season}</h3>
+                                <p>${season.description}</p>
+                            </div>
+                        </div>
+                        <div class="season-meta">
+                            <div class="episode-count">${season.episodes} Episodes</div>
+                            <div class="year">${season.year}</div>
+                        </div>
+                        <div class="toggle-icon">▼</div>
+                    </div>
+                    <div class="episodes-list">
+                        ${episodesHTML}
+                    </div>
+                `;
+          container.appendChild(seasonBlock);
+        });
+      }
+      function toggleSeason(header) {
+        const seasonBlock = header.parentElement;
+        seasonBlock.classList.toggle("expanded");
+      }
+      // Search functionality
+      const searchInput = document.getElementById("searchInput");
+      searchInput.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        const episodes = document.querySelectorAll(".episode-item");
+        let visibleCount = 0;
+        episodes.forEach((episode) => {
+          const title = episode.dataset.title;
+          const episodeNum = episode.dataset.episode;
+          if (
+            title.includes(query) ||
+            episodeNum.includes(query) ||
+            query === ""
+          ) {
+            episode.style.display = "flex";
+            visibleCount++;
+            if (query !== "") {
+              episode.closest(".season-block").classList.add("expanded");
+            }
+          } else {
+            episode.style.display = "none";
+          }
+        });
+        // Show no results message
+        const container = document.getElementById("seasonsContainer");
+        const existingNoResults = document.querySelector(".no-results");
+        if (existingNoResults) existingNoResults.remove();
+        if (visibleCount === 0 && query !== "") {
+          const noResults = document.createElement("div");
+          noResults.className = "no-results";
+          noResults.innerHTML = `
+                    <div class="icon">🔍</div>
+                    <h3>No episodes found</h3>
+                    <p>Try searching with different keywords</p>
+                `;
+          container.appendChild(noResults);
+        }
+      });
+      // Expand/Collapse all functionality
+      document.getElementById("expandAll").addEventListener("click", () => {
+        document.querySelectorAll(".season-block").forEach((block) => {
+          block.classList.add("expanded");
+        });
+      });
+      document.getElementById("collapseAll").addEventListener("click", () => {
+        document.querySelectorAll(".season-block").forEach((block) => {
+          block.classList.remove("expanded");
+        });
+      });
+      // Mobile navigation toggle
+      const navToggle = document.getElementById("nav-toggle");
+      const mainNav = document.getElementById("main-nav");
+      navToggle.addEventListener("click", () => {
+        const isVisible = mainNav.getAttribute("data-visible") === "true";
+        mainNav.setAttribute("data-visible", !isVisible);
+        navToggle.setAttribute("aria-expanded", !isVisible);
+      });
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mainNav.setAttribute("data-visible", "false");
+          navToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+      document.addEventListener("click", (e) => {
+        if (!mainNav.contains(e.target) && !navToggle.contains(e.target)) {
+          mainNav.setAttribute("data-visible", "false");
+          navToggle.setAttribute("aria-expanded", "false");
+        }
+      });
+      // Initialize page
+      renderSeasons(seasonsData);
+    </script>
+  </body>
+</html>
